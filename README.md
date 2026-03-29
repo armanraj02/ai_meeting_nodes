@@ -213,7 +213,7 @@ pytest --cov                 # Coverage report
 
 ## 📈 Performance
 
-- **Processing**: ~1-2 seconds per minute of audio (with LLM)
+- **Processing**: ~1-2 per minute of audio (with LLM)
 - **Storage**: SQLite (upgradable to PostgreSQL)
 - **Concurrency**: Handled via FastAPI async
 - **Scaling**: Ready for horizontal scaling
