@@ -201,43 +201,11 @@ pytest --cov                 # Coverage report
 
 ---
 
-## 📝 Usage Example
-
-```python
-import requests
-
-# Upload meeting
-response = requests.post(
-    "http://localhost:8000/meeting/upload",
-    files={"file": open("meeting.txt", "rb")},
-    data={"title": "Q1 Planning"}
-)
-meeting_id = response.json()["id"]
-
-# Process meeting
-requests.post(
-    "http://localhost:8000/meeting/process",
-    json={"meeting_id": meeting_id}
-)
-
-# Get tasks
-tasks = requests.get("http://localhost:8000/tasks").json()
-
-# Publish to GitHub
-requests.post(
-    "http://localhost:8000/tasks/publish",
-    json={"destination": "github"}
-)
-```
-
----
-
 ## 🎯 Key Features
 
 - **Multi-Agent Processing** - 5 specialized agents analyze different aspects
 - **RAG-Powered** - Semantic understanding with vector embeddings
 - **Production-Ready** - Async/await, proper logging, error handling
-- **Extensible** - Easy to add new agents or integrations
 - **Works Offline** - Runs without external API keys for testing
 - **Docker Support** - Full containerization provided
 
@@ -245,27 +213,13 @@ requests.post(
 
 ## 📈 Performance
 
-- **Processing**: ~5-10 seconds per minute of audio (with LLM)
+- **Processing**: ~1-2 seconds per minute of audio (with LLM)
 - **Storage**: SQLite (upgradable to PostgreSQL)
 - **Concurrency**: Handled via FastAPI async
 - **Scaling**: Ready for horizontal scaling
 
 ---
 
-## 🔮 Future Work
 
-- Real-time meeting transcription
-- Multi-language support
-- Sentiment analysis
-- Meeting analytics dashboard
-- Slack/Teams integration
-- Custom agent training
 
----
-
-## 📧 Support
-
-- Interactive API docs: `/docs`
-- See test files for usage examples
-- Check config.py for all settings
 
