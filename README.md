@@ -89,34 +89,6 @@ Access at `http://localhost:8000`
 
 ---
 
-## 📡 API Endpoints
-
-### Meeting Operations
-```
-POST   /meeting/upload       Upload meeting transcript or audio
-POST   /meeting/process      Process meeting through agents
-GET    /meeting/{id}         Retrieve meeting details
-GET    /meeting/summary      Get meeting summary
-```
-
-### Task Management
-```
-GET    /tasks                List all tasks
-GET    /tasks/{id}           Get specific task
-POST   /tasks/publish        Publish tasks to external tools
-PUT    /tasks/{id}           Update task
-DELETE /tasks/{id}           Delete task
-```
-
-### Integrations
-```
-POST   /integrate/github     Enable GitHub integration
-POST   /integrate/jira       Enable Jira integration
-POST   /integrate/trello     Enable Trello integration
-```
-
----
-
 ## 📂 Project Structure
 
 ```
